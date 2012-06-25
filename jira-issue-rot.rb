@@ -60,7 +60,10 @@ END_OF_MESSAGE
 end
 
 def expire_issue(issue_id)
-# Courtesy of https://developer.atlassian.com/display/JIRADEV/Remote+API+%28SOAP%29+Examples
+
+# Need to use the (legacy) soap interface because the REST one does not support transitioning issue states.
+
+# Base on sample code from  https://developer.atlassian.com/display/JIRADEV/Remote+API+%28SOAP%29+Examples
   soap = SOAP::WSDLDriverFactory.new("http://#{$jira_server}:#{$jira_port}#{$jira_soap_url}").create_rpc_driver
   token = soap.login($jira_username, $jira_password)
 
