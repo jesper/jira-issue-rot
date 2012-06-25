@@ -1,0 +1,1 @@
+This script will close jira issues (resolution: expired) that have not been modified in the last 100 days and send an email report with the summary.
