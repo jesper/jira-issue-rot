@@ -1,1 +1,3 @@
 This script will close jira issues (resolution: expired) that have not been modified in the last 100 days and send an email report with the summary.
+
+expire_issue() in jira-issue-rot.rb may require some tweaking depending on your issue transition flow.
