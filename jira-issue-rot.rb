@@ -1,14 +1,12 @@
 #!/usr/bin/env ruby
-require 'rubygems'
 require 'date'
 require 'net/http'
 require 'net/smtp'
 require 'nokogiri'
 require 'json'
-gem 'soap4r'
 require 'soap/wsdlDriver'
 
-require 'config.rb'
+require './config.rb'
 
 def search_for_rotten_issues
   req = Net::HTTP::Get.new(URI.escape($jira_search_url))
